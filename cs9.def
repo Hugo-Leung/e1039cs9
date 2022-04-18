@@ -1,0 +1,12 @@
+Bootstrap: docker
+From: quay.io/centos/centos:stream9-development
+
+%files 
+	./yum.sh /yum.sh
+
+%post
+	dnf update -y 
+	sh /yum.sh
+	NOW=`date`
+	echo "export NOW=\"${NOW}\"" >> $APPTAINER_ENVIRONMENT
+	
