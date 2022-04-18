@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: quay.io/centos/centos:stream9-development
+From: quay.io/centos/centos:stream9
 
 %files 
 	./yum.sh /yum.sh
