@@ -1,9 +1,11 @@
 dnf install -y 'dnf-command(config-manager)'
 dnf config-manager --set-enabled crb
-dnf install epel-release epel-next-release
+dnf install -y \
+	https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm \
+	https://dl.fedoraproject.org/pub/epel/epel-next-release-latest-9.noarch.rpm
 dnf install -y  \
 	gcc-c++ libstdc++ xrootd-client-libs xrootd-libs xrootd-client-libs gfal2-plugin-xrootd \
-	krb5-workstation strace redhat-lsb-core mesa-libGLU mesa-libGLU-devel libXmu libXmu-devel libXScrnSaver libSM-devel libXpm-devel libgfortran glibc.i686 \
+	krb5-workstation strace mesa-libGLU mesa-libGLU-devel libXmu libXmu-devel libXScrnSaver libSM-devel libXpm-devel libgfortran glibc.i686 \
 	expat-devel libxml2-devel mysql-libs libtiff libjpeg-turbo openssh-clients openssl-devel tzdata glibc-headers glibc-devel singularity \
 	pcre2 xxhash-libs libzstd libzstd-devel mpich mpich-devel numactl numactl-devel libffi libffi-devel libcurl-devel \
 	ftgl gl2ps libGLEW giflib libAfterImage \
